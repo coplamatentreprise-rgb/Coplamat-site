@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>COPLAMAT - Construction & Développement Durable</title>
+<style>
+  body { margin:0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background:#f9f9f9; color:#333; }
+  header { background:#222; color:#fff; padding: 10px 20px; display:flex; align-items:center; justify-content:space-between; }
+  header h1 { font-size:24px; margin:0; letter-spacing: 2px; }
+  nav a { color:#fff; text-decoration:none; margin-left:15px; font-weight:600; }
+  nav a:hover { text-decoration: underline; }
+
+  .hero-slider { position:relative; overflow:hidden; max-height: 450px; }
+  .slide { opacity:0; transition: opacity 1s ease-in-out; position:absolute; width:100%; height:450px; object-fit:cover; }
+  .slide.active { opacity:1; position:relative; }
+
+  main { padding:20px; max-width: 1100px; margin: auto; }
+
+  section { margin-bottom: 60px; }
+  h2 { color:#007bff; margin-bottom: 15px; border-bottom: 3px solid #007bff; padding-bottom:5px; }
+
+  .services-list { display:flex; flex-wrap: wrap; gap:20px; }
+  .service { background:#fff; padding:20px; flex:1 1 300px; box-shadow:0 0 12px rgba(0,0,0,0.1); border-radius:6px; }
+  .service h3 { margin-top:0; color:#0056b3; }
+
+  .gallery { display:flex; flex-wrap: wrap; gap: 15px; justify-content:center; }
+  .gallery img { width: 100%; max-width: 330px; border-radius: 8px; box-shadow: 0 0 10px #ccc; }
+
+  .contact-form { background:#fff; padding:20px; border-radius:8px; box-shadow: 0 0 15px rgba(0,0,0,0.1); max-width:500px; margin:auto; }
+  .contact-form label { display:block; margin-top:15px; font-weight:600; }
+  .contact-form input, .contact-form textarea { width:100%; padding:10px; margin-top:5px; border:1px solid #ccc; border-radius:4px; resize:none; }
+  .contact-form button { margin-top:20px; background:#007bff; color:#fff; border:none; padding:12px 25px; cursor:pointer; font-size:16px; border-radius:4px; }
+  .contact-form button:hover { background:#0056b3; }
+
+  footer { background:#222; color:#ccc; padding:15px 20px; text-align:center; font-size:14px; }
+
+  @media(max-width:720px) {
+    .services-list { flex-direction: column; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>COPLAMAT SARLU</h1>
+  <nav>
+    <a href="#accueil">Accueil</a>
+    <a href="#services">Services</a>
+    <a href="#projets">Réalisations</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<section id="accueil" class="hero-slider">
+  <img src="https://i.imgur.com/QCG1b1P.jpg" alt="Villa Moderne" class="slide active" />
+  <img src="https://i.imgur.com/mDv3MT4.jpg" alt="Chantier Construction" class="slide" />
+  <img src="https://i.imgur.com/vy8wSTj.png" alt="Logo COPLAMAT" class="slide" style="background:#fff; object-fit:contain;"/>
+</section>
+
+<main>
+  <section id="presentation">
+    <h2>À propos de COPLAMAT</h2>
+    <p>COPLAMAT SARLU est une entreprise de construction basée à Kinshasa, spécialisée dans les travaux architecturaux et techniques, incluant les projets durables et l'utilisation de matériaux recyclés. Notre mission est de contribuer au développement de la République Démocratique du Congo avec des solutions innovantes et écologiques.</p>
+  </section>
+
+  <section id="services">
+    <h2>Nos Services</h2>
+    <div class="services-list">
+      <div class="service">
+        <h3>Construction Générale</h3>
+        <p>Réalisation de bâtiments résidentiels, commerciaux et industriels de qualité.</p>
+      </div>
+      <div class="service">
+        <h3>Projets Durables</h3>
+        <p>Intégration de matériaux recyclés, notamment plastique, dans la construction de chaussées et infrastructures.</p>
+      </div>
+      <div class="service">
+        <h3>Énergies Renouvelables</h3>
+        <p>Installation de solutions écologiques pour l’énergie solaire et autres alternatives propres.</p>
+      </div>
+      <div class="service">
+        <h3>Conseil & Conception</h3>
+        <p>Conception architecturale biophilique adaptée au climat tropical et optimisation technique des projets.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="projets">
+    <h2>Réalisations</h2>
+    <div class="gallery">
+      <img src="https://i.imgur.com/QCG1b1P.jpg" alt="Villa Moderne" />
+      <img src="https://i.imgur.com/mDv3MT4.jpg" alt="Chantier Construction" />
+      <img src="https://i.imgur.com/vy8wSTj.png" alt="Logo COPLAMAT" />
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contactez-nous</h2>
+    <p>Ville de Kinshasa, Commune de Galiema, Ma Campagne N°39</p>
+    <p>Téléphones : +243 971 865 766 / +243 828 894 103</p>
+    <p>Email : <a href="mailto:coplamatentreprise@gmail.com">coplamatentreprise@gmail.com</a></p>
+    <form class="contact-form" action="#" method="post">
+      <label for="nom">Nom complet</label>
+      <input type="text" id="nom" name="nom" required />
+
+      <label for="email">Adresse Email</label>
+      <input type="email" id="email" name="email" required />
+
+      <label for="message">Message</label>
+      <textarea id="message" name="message" rows="5" required></textarea>
+
+      <button type="submit">Envoyer</button>
+    </form>
+  </section>
+</main>
+
+<footer>
+  © 2025 COPLAMAT SARLU - Tous droits réservés
+</footer>
+
+<script>
+  // Simple slider automatique
+  let slides = document.querySelectorAll('.slide');
+  let currentIndex = 0;
+  setInterval(() => {
+    slides[currentIndex].classList.remove('active');
+    currentIndex = (currentIndex+1) % slides.length;
+    slides[currentIndex].classList.add('active');
+  }, 4000);
+</script>
+
+</body>
+</html>
